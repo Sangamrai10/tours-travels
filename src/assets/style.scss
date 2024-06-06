@@ -1,0 +1,1672 @@
+@import '_var';
+@import '_mixing';
+
+body {
+    font-family: $universalFont;
+}
+
+.aa {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    animation-name: aa;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-duration: 0.5s;
+
+    @keyframes aa {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+    }
+
+    .dropdown {
+
+        li a {
+            color: $banner-text;
+            text-decoration: none;
+            font-size: 13px;
+
+            &:hover {
+                color: $brand;
+                transform: translateY(-20px);
+            }
+        }
+    }
+}
+
+nav {
+    .navbar-brand {
+        img {
+            width: 100px;
+        }
+    }
+
+    .srcIcon {
+        a {
+            color: $black;
+        }
+    }
+
+    .nav-item {
+        position: relative;
+        margin-left: 10px;
+
+        a {
+            margin: 1rem;
+        }
+
+        &:hover {
+            &::after {
+                content: '';
+                background: $brand;
+                height: 13px;
+                width: 10%;
+                position: absolute;
+                bottom: 15px;
+                left: 5px;
+                margin-right: 10px;
+                animation: aftr 0.5s ease-out 1 forwards;
+            }
+
+            @keyframes aftr {
+                0% {
+                    width: 0;
+                }
+
+                100% {
+                    width: 100%;
+                }
+
+            }
+        }
+
+        &:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            list-style: none;
+            background: $black;
+            width: 200%;
+            left: -2px;
+            top: 4.7rem;
+            line-height: 10px;
+            padding: 20px 15px;
+
+            li a {
+                color: $banner-text;
+                text-decoration: none;
+                font-size: 15px;
+
+                &:hover {
+                    color: $brand;
+                    transform: translateX(20px);
+                }
+
+                i {
+                    font-size: 10px;
+                    padding-top: 1px;
+                }
+            }
+
+        }
+    }
+
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+        &::after {
+            content: '';
+            background: $brand;
+            height: 13px;
+            width: calc(100%);
+            position: absolute;
+            bottom: 15px;
+            left: 5px;
+        }
+    }
+
+    .user {
+        @include a {
+            display: block;
+        }
+    }
+
+    .srcIc {
+        @include a {
+            display: none;
+        }
+
+        @include b {
+            display: none;
+        }
+    }
+}
+
+.home {
+    .slider {
+        position: relative;
+
+        img {
+            height: 600px;
+            position: relative;
+        }
+
+        .banner-txt {
+            position: absolute;
+            top: 40%;
+            right: 30%;
+
+            @include a {
+                text-align: center;
+                right: 20px;
+            }
+
+            @include b {
+                text-align: center;
+            }
+
+            h4 {
+                .span1 {
+                    color: $banner-text;
+                    font-size: x-large;
+                    font-weight: bold;
+                    font-size: 60px;
+                    animation-name: q, blink;
+                    animation-duration: 1s;
+                    position: relative;
+                    animation-iteration-count: 1;
+                    animation-delay: 0.5s;
+                    animation-fill-mode: forwards;
+
+                    @keyframes q {
+                        0% {
+                            left: 100px;
+                        }
+
+                        100% {
+                            left: 0px;
+                        }
+                    }
+
+                    @keyframes blink {
+                        0% {
+                            opacity: 0;
+                        }
+
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+
+                span {
+                    color: $banner-text;
+                    font-weight: 100;
+                    font-size: 60px;
+                    animation-name: q, blink;
+                    animation-duration: 1s;
+                    position: relative;
+                    animation-iteration-count: 1;
+                    animation-delay: 1.9s;
+
+                    @include b {
+                        font-size: 50px;
+                    }
+
+                    @keyframes q {
+                        0% {
+                            left: 100px;
+                        }
+
+                        100% {
+                            left: 0px;
+                        }
+                    }
+
+                    @keyframes blink {
+                        0% {
+                            opacity: 0;
+                        }
+
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-family: $font;
+                color: $brand1;
+                font-size: 22px;
+                animation-name: q, blink;
+                animation-duration: 1s;
+                position: relative;
+                animation-iteration-count: 1;
+                animation-delay: 0.7s;
+
+                @keyframes q {
+                    0% {
+                        left: 100px;
+                    }
+
+                    100% {
+                        left: 0px;
+                    }
+                }
+
+                @keyframes blink {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            a {
+                background: $banner-text;
+                color: $black;
+                font-weight: bold;
+                padding: 15px 50px;
+                text-decoration: none;
+                animation-name: q, blink;
+                animation-duration: 1s;
+                position: relative;
+                animation-iteration-count: 1;
+                animation-delay: 0.9s;
+
+                @keyframes q {
+                    0% {
+                        left: 100px;
+                    }
+
+                    100% {
+                        left: 0px;
+                    }
+                }
+
+                @keyframes blink {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                .arr {
+                    display: none;
+                    font-size: 15px;
+                }
+
+                &:hover .arr {
+                    display: inline-block;
+                    animation-name: arr;
+                    animation-duration: 1s;
+                    animation-iteration-count: 1;
+                    position: absolute;
+                    animation-duration: 0.2s;
+                    bottom: 31%;
+
+                    @keyframes arr {
+                        0% {
+                            transform: translateX(-15px);
+                            opacity: 0;
+                        }
+
+                        100% {
+
+                            transform: translateX(0px);
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+.findNow {
+    background-color: $brand;
+    padding-top: 20px;
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        @include a {
+            display: block;
+        }
+
+        #whereTo {
+            border: none;
+            border-bottom: 2px solid $black;
+            width: 150%;
+            background: none;
+            outline: 0;
+            cursor: pointer;
+
+            @include a {
+                padding: 10px;
+                width: 100%;
+            }
+
+            @include b {
+                width: 100%;
+            }
+        }
+
+        #whereTo::placeholder {
+            color: $black;
+        }
+
+        #mnth {
+            background: none;
+            border: none;
+            border-bottom: 2px solid $black;
+            width: 200%;
+            outline: 0;
+
+            @include a {
+                padding: 10px;
+                width: 100%;
+            }
+
+            @include b {
+                padding-top: 3px;
+                width: 100%;
+            }
+
+            @include c {
+                width: 190%;
+                padding-top: 3px;
+            }
+        }
+
+        #travelTypes {
+            background: none;
+            border: none;
+            border-bottom: 2px solid $black;
+            width: 200%;
+            outline: 0;
+
+            @include a {
+                width: 100%;
+                padding: 10px;
+            }
+
+            @include b {
+                width: 100%;
+                padding-top: 3px;
+            }
+
+            @include c {
+                width: 150%;
+                padding-top: 3px;
+            }
+        }
+
+        .findNow-btn {
+            a {
+
+                background-color: $black;
+                padding: 15px 40px;
+                text-decoration: none;
+                color: $banner-text;
+
+                @include a {
+                    display: inline-block;
+                    margin-top: 10px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.goSec {
+    padding: 49px;
+
+    @include a {
+        padding: 30px;
+    }
+
+    h4 {
+        font-weight: 100;
+        font-size: 40px;
+
+        @include a {
+            font-size: 20px;
+        }
+    }
+
+    span {
+        font-size: 40px;
+        font-weight: bolder;
+        line-height: 1;
+
+        @include a {
+            font-size: 30px;
+        }
+    }
+
+    .brdr {
+        border-left: 4px solid $black;
+        padding-right: 15px;
+    }
+
+    .go {
+        position: relative;
+
+        @include a {
+            display: none;
+        }
+
+        @include b {
+            display: none;
+        }
+
+        p {
+            position: absolute;
+            right: 0%;
+            top: 0%;
+            font-size: 15rem;
+            font-weight: bold;
+            color: $brand;
+            animation-name: go;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-delay: 0.5s;
+
+            @keyframes go {
+                0% {
+                    transform: translateY(-130px);
+                    opacity: 0;
+
+                }
+
+                100% {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+
+            }
+        }
+    }
+}
+
+.corfuGreece {
+    img {
+        transition: 0.4s;
+    }
+
+    .div {
+        overflow: hidden;
+        position: relative;
+
+        &:hover img {
+            transform: scale(01.1);
+        }
+
+        &:hover .txt {
+            display: block;
+            opacity: 1;
+        }
+
+        .txt {
+            display: none;
+            position: absolute;
+            background: linear-gradient(transparent, #0000004c, #0000008b, #0000008b);
+            z-index: 99;
+            bottom: 0px;
+            padding: 60px 0 10px 0;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s;
+
+            h4 {
+                font-weight: 500;
+                color: $banner-text;
+                margin-bottom: 0;
+            }
+
+            p {
+                margin: 0;
+                color: $brand;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .secnd {
+        img {
+            height: 452px;
+        }
+    }
+
+    .midImg {
+        img {
+            height: 210px;
+        }
+    }
+
+    .corfu {
+        border: 4px dashed $brand;
+        padding: 26px;
+
+        .hdr {
+            .price {
+                color: $brand2;
+            }
+        }
+
+        .desc {
+            p {
+                color: $gray;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $black;
+            position: relative;
+
+            &:hover i {
+                animation-name: arr;
+                animation-duration: 0.5s;
+                animation-iteration-count: 1;
+                position: absolute;
+                bottom: -3px;
+
+                @keyframes arr {
+                    0% {
+                        transform: translateX(-15px);
+                        opacity: 0;
+                    }
+
+                    100% {
+
+                        transform: translateX(10px);
+                    }
+
+                }
+            }
+        }
+
+        i {
+            color: $brand2;
+            padding: 0 10px;
+            font-size: small;
+            font-weight: bold;
+        }
+
+    }
+}
+
+.ChooseTheDestination {
+    background: $bg;
+
+    .padding {
+        padding: 5rem 0;
+    }
+
+    .brdr {
+        border-left: 3px solid $black;
+
+        h4 {
+            padding-left: 10px;
+            line-height: 2.5rem;
+
+            span {
+                font-size: 40px;
+            }
+
+            .span1 {
+                font-weight: bold;
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+.Europe {
+    .flex {
+        display: flex;
+
+        @include a {
+            display: block;
+        }
+
+        @include b {
+            display: block;
+        }
+
+
+        .a {
+            background: $brand;
+            width: 450px;
+            height: 450px;
+            overflow: hidden;
+
+            @include b {
+                width: 100%;
+            }
+
+            a {
+                &:hover img {
+                    transform: scale(01.1);
+                }
+
+                img {
+                    width: 450px;
+                    transition: 0.9s;
+
+                    @include b {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .b {
+            background: $brand;
+            width: 450px;
+            height: 450px;
+            position: relative;
+
+            @include b {
+                width: 100%;
+            }
+
+            a {
+                color: $black;
+
+                &:hover h4 {
+                    transition-duration: 0.5s;
+                    transform: translateY(-10px);
+                }
+
+                &:hover span {
+                    transition-duration: 0.5s;
+                    transform: translateY(10px);
+                }
+
+                h4 {
+                    @include b {
+                        text-align: center;
+                        left: 40%;
+                    }
+
+                    font-family: $brandFont;
+                    text-transform: uppercase;
+                    position: absolute;
+                    bottom: 40%;
+                    left: 20%;
+                    font-size: 60px;
+                    font-weight: bold;
+                    z-index: 1;
+                }
+
+                span {
+                    @include b {
+                        left: 45%;
+                    }
+
+                    font-family: $brandFont;
+                    text-transform: uppercase;
+                    position: absolute;
+                    bottom: 33%;
+                    left: 25%;
+                    font-size: 60px;
+                    font-weight: bold;
+                    color: $banner-text;
+                }
+            }
+        }
+
+        .c {
+            background: $banner-text;
+            width: 450px;
+            height: 450px;
+
+            @include b {
+                width: 100%;
+            }
+
+            &:hover a {
+                width: 25%;
+                transition-duration: 1s;
+            }
+
+            .exp {
+                margin-top: 5em;
+
+                .spanP {
+                    color: $brand2;
+                }
+
+                .top {
+                    p {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        font-size: 20px;
+
+                        span {
+                            font-size: 30px;
+                            font-weight: bolder;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $black;
+                        background: $brand;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+
+            .learnMore {
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    position: relative;
+
+                    &:hover i {
+                        animation-name: arr;
+                        animation-duration: 0.5s;
+                        animation-iteration-count: 1;
+                        position: absolute;
+                        bottom: 0;
+
+                        @keyframes arr {
+                            0% {
+                                transform: translateX(-15px);
+                                opacity: 0;
+                            }
+
+                            100% {
+
+                                transform: translateX(10px);
+                            }
+
+                        }
+                    }
+                }
+
+                i {
+                    color: $brand2;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .asia {
+            background: black;
+
+            a {
+                h4 {
+                    color: $brand;
+                }
+
+                span {
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
+
+.ok {
+    background-color: $bg;
+
+    .hehe {
+        a {
+            .mg {
+                overflow: hidden;
+                position: relative;
+
+                &:hover .gm {
+                    bottom: 0px;
+                }
+
+                &:hover img {
+                    transform: scale(01.1);
+                }
+
+                img {
+                    transition: 0.9s;
+                    width: 100%;
+                    height: 50vh;
+                }
+
+                .gm {
+                    padding: 15px;
+                    position: absolute;
+                    background: $banner-text;
+                    color: $black;
+                    bottom: -7rem;
+                    transition: 0.9s;
+
+                    @include b {
+                        bottom: -8rem;
+                    }
+
+                    @include d {
+                        bottom: -5rem;
+                    }
+
+                    @include e {
+                        bottom: -5rem;
+                    }
+
+                    h6 {
+                        color: $brand2;
+                    }
+
+                    p {
+                        color: $gray;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+.videoBanner {
+    a {
+        &:hover img {
+            transform: scale(01.05);
+        }
+
+        .vidBtn {
+            overflow: hidden;
+            position: relative;
+
+            img {
+                transition: 0.9s;
+            }
+
+            .btn {
+                position: absolute;
+                background-color: $brand;
+                overflow-x: 1;
+                left: 50%;
+                top: 50%;
+                border-radius: 50px;
+                padding: 12px 18px;
+
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .newsletter {
+        background: $brand;
+        padding: 4rem 0;
+
+        .innerNewsLetter {
+            p {
+                font-size: 3rem;
+                line-height: 3rem;
+
+                span {
+                    font-size: 3rem;
+                    font-weight: 600;
+                }
+            }
+
+            input {
+                width: 50%;
+                border: none;
+                border-bottom: 2px solid $black;
+                background: none;
+                outline: none;
+            }
+
+            input::placeholder {
+                color: $black;
+                font-size: 1.2rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $banner-text;
+            display: inline-block;
+            background: $black;
+            padding: 1rem 4rem;
+            margin: 10px 0 0 0;
+            transition: 0.2s;
+
+            &:hover {
+                background: none;
+                color: $black;
+                border: 2px solid $black;
+            }
+        }
+    }
+}
+
+.trendingBestSelling {
+    position: relative;
+
+    .away {
+        position: absolute;
+        top: -70px;
+        right: 0%;
+
+        @include a {
+            display: none;
+        }
+
+        @include b {
+            display: none;
+        }
+
+        h4 {
+            @include c {
+                font-size: 10rem;
+            }
+
+            font-size: 13rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: $brand;
+            z-index: 0;
+        }
+    }
+}
+
+.slider2 {
+    background-color: $bg;
+
+    .owl-carousel .owl-item img {
+        display: block;
+        width: 100%;
+        height: 300px;
+    }
+
+    .owl-item {
+        width: 200px;
+    }
+
+    .cntent {
+        width: 100%;
+
+        &:hover img {
+            transform: scale(01.1);
+        }
+
+        .h6,
+        h6 {
+            color: $brand2;
+        }
+
+        p {
+            color: $gray;
+        }
+    }
+
+    .img {
+        overflow: hidden;
+
+        img {
+            transition: 0.5s;
+        }
+    }
+
+    .dt {
+        background: $brand;
+    }
+
+}
+
+footer {
+    background-image: url('../img/footerBackround.jpg');
+    width: 100%;
+    height: 88vh;
+
+    @include a {
+        height: 300vh;
+    }
+
+    @include b {
+        height: 280vh;
+    }
+
+    @include c {
+        height: 120vh;
+    }
+
+    @include d {
+        height: 98vh;
+    }
+
+    .flex {
+        display: flex;
+        padding: 20px;
+        padding-top: 5rem;
+        justify-content: space-between;
+        color: $banner-text;
+
+        @include a {
+            display: block;
+        }
+
+        @include b {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .about {
+            padding: 0 20px 0 0;
+
+            h4 {
+                @include b {
+                    margin-bottom: 1rem;
+                    margin-top: 3rem;
+                }
+
+                margin-bottom: 2rem;
+            }
+
+            p {
+                color: $gray;
+                line-height: 1.5rem;
+
+            }
+
+            .contact {
+                line-height: 2.7rem;
+
+                a {
+                    text-decoration: none;
+                    color: $brand;
+
+                    &:hover {
+                        color: $banner-text;
+                    }
+                }
+            }
+        }
+
+        .latestPosts {
+            width: 100%;
+            padding: 0 10px;
+
+            @include a {
+                margin-top: 3rem;
+            }
+
+            @include b {
+                margin-top: 3rem;
+            }
+
+            h4 {
+                @include a {
+                    margin-bottom: 1rem;
+                }
+
+                @include b {
+                    margin-bottom: 1rem;
+                }
+
+                margin-bottom: 2rem;
+            }
+
+
+            .posts {
+                .aug {
+                    a {
+                        text-decoration: none;
+                        color: $brand;
+                    }
+                }
+
+                p {
+                    a {
+                        color: $gray;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $brand;
+                        }
+                    }
+                }
+            }
+        }
+
+        .latestTweets {
+            padding: 0 10px;
+
+            @include a {
+                margin-top: 3rem;
+            }
+
+            @include b {
+                margin-top: 3rem;
+            }
+
+            h4 {
+                margin-bottom: 2rem;
+
+                @include a {
+                    margin-bottom: 1rem;
+                }
+
+                @include b {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .tweets {
+                margin-bottom: 2rem;
+                color: $gray;
+
+                @include a {
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    color: #b1abab;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $brand;
+                    }
+                }
+            }
+
+            i {
+                color: $brand;
+            }
+        }
+
+        .instagram {
+            padding: 0 0 0 10px;
+
+            @include c {
+                padding: 0 0 0 10px;
+                display: inline;
+            }
+
+            h4 {
+                margin-bottom: 2rem;
+
+                @include a {
+                    margin-bottom: 1rem;
+                    margin-top: 3rem;
+                }
+
+                @include b {
+                    margin-bottom: 1rem;
+                    margin-top: 3rem;
+                }
+            }
+
+            .ins {
+                display: flex;
+
+                a {
+                    overflow: hidden;
+
+                    img {
+                        width: 70px;
+                        padding: 4px;
+
+                        @include a {
+                            width: 150px;
+                            height: 150px;
+                        }
+
+                        @include b {
+                            width: 150px;
+                            height: 150px;
+                        }
+
+                        &:hover {
+                            transform: scale(01.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.aboutUs {
+    .top {
+        .imgf {
+            background-image: url('../img/aboutUsBanner.jpg');
+            height: 100vh;
+            background-attachment: fixed;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                position: sticky;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+            }
+
+            .flex {
+                position: absolute;
+                color: $banner-text;
+
+                h4 {
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+}
+
+.AboutUsProgress {
+    padding-top: 5rem;
+
+    .proflex {
+        display: flex;
+        justify-content: space-between;
+
+        @include a {
+            display: block;
+        }
+
+        @include b {
+            display: block;
+        }
+
+        @include c {
+            display: block;
+        }
+    }
+
+    .prgss {
+        padding: 0 10px;
+
+        @include a {
+            margin-top: 3rem;
+        }
+
+        @include b {
+            margin-top: 3rem;
+        }
+
+        @include c {
+            margin-top: 3rem;
+        }
+    }
+
+    .contactUs {
+        h6 {
+            font-size: 28px;
+
+            span {
+                font-weight: bold;
+            }
+
+        }
+
+        .p {
+            color: $brand2;
+        }
+
+        .p1 {
+            color: $gray;
+        }
+    }
+
+    progress {
+        width: 300px;
+        height: 4px;
+        border-radius: 5px;
+
+    }
+
+    progress::-webkit-progress-bar {
+        background-color: rgb(199, 197, 197);
+    }
+
+    progress::-webkit-progress-value {
+        background-color: $black;
+    }
+}
+
+.AboutUsContact {
+    padding: 5rem 0;
+
+    .contact {
+        display: flex;
+        justify-content: space-between;
+
+        @include a {
+            display: block;
+        }
+
+        @include b {
+            display: block;
+        }
+    }
+
+    h4 {
+        @include a {
+            padding: 5px 0;
+        }
+
+        padding: 10px 0;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            line-height: 2.5rem;
+            color: $gray;
+
+            i {
+                color: $brand1;
+            }
+
+            a {
+                text-decoration: none;
+                color: $gray;
+                transition: 0.5s;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.AboutUsLogo {
+    text-align: center;
+
+    .clients {
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            &:hover img {
+                transform: scale(01.1);
+            }
+
+            img {
+                transition: 0.5s;
+                width: 100px;
+                padding: 1rem;
+            }
+
+        }
+    }
+}
+
+.SideSlider {
+    .Europe {
+        .b {
+            background-image: url('../img/tourImg8.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            @include b {
+                width: 100%;
+            }
+
+            a {
+                color: $black;
+
+                &:hover h4 {
+                    transition-duration: 0.5s;
+                    transform: translateY(-10px);
+                }
+
+                &:hover span {
+                    transition-duration: 0.5s;
+                    transform: translateY(10px);
+                }
+
+                h4 {
+                    @include a {
+                        text-align: center;
+                        left: 10%;
+                        top: 10px;
+                    }
+
+                    @include b {
+                        text-align: center;
+                        left: 20%;
+                    }
+
+                    font-family: $brandFont;
+                    text-transform: uppercase;
+                    position: absolute;
+                    text-align: center;
+                    bottom: 20%;
+                    left: 30%;
+                    line-height: 6rem;
+                    font-size: 60px;
+                    font-weight: bold;
+                    z-index: 1;
+                }
+
+                span {
+                    @include a {
+                        left: 15%;
+                    }
+
+                    @include b {
+                        left: 25%;
+                    }
+
+                    font-family: $brandFont;
+                    text-transform: uppercase;
+                    position: absolute;
+                    text-align: center;
+                    bottom: 14%;
+                    left: 35%;
+                    font-size: 60px;
+                    font-weight: bold;
+                    color: $banner-text;
+                }
+            }
+        }
+    }
+}
+
+.gallery {
+    .flw {
+        display: flex;
+
+        @include a {
+            display: block;
+        }
+
+        @include b {
+            display: flex;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            transition: 0.4s;
+        }
+
+        a {
+            overflow: hidden;
+
+            &:hover img {
+                transform: scale(01.1);
+            }
+        }
+    }
+
+}
+
+.GetLatestNews1 {
+    background: $bg;
+    padding: 30px 0;
+
+    .betterPhotos {
+        @include a {
+            margin-top: 10px;
+        }
+
+        .ani {
+            overflow: hidden;
+
+            a {
+                img {
+                    transition: 0.5s;
+                }
+
+                &:hover img {
+                    transform: scale(01.1);
+                }
+            }
+        }
+
+        .betterPhotos-txt {
+            padding: 40px 20px;
+            line-height: 2.5rem;
+
+            a {
+                color: $gray;
+                transition: 0.5s;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    .secDiv {
+        position: relative;
+        border: 4px dashed $brand;
+
+        a {
+            color: $gray;
+            transition: 0.5s;
+
+            &:hover {
+                color: $black;
+            }
+        }
+
+        .betterPhotos-txt {
+            padding: 64px;
+            line-height: 2.5rem;
+        }
+
+        .qutoeMark {
+            position: absolute;
+            background-color: $brand;
+            padding: 5px;
+            top: -4px;
+            left: 20px;
+            transform: rotate(180deg);
+
+            i {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .secDiv1 {
+        position: relative;
+        border: 4px dashed $brand;
+        margin-top: 10px;
+        background-color: $brand;
+
+        a {
+            color: $gray;
+            transition: 0.5s;
+
+            &:hover {
+                color: $black;
+            }
+        }
+
+        .betterPhotos-txt {
+            padding: 64px;
+            line-height: 2.5rem;
+        }
+
+        .qutoeMark {
+            position: absolute;
+            background-color: $black;
+            color: $brand;
+            padding: 5px;
+            top: -4px;
+            left: 20px;
+            transform: rotate(180deg);
+
+            i {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.w480 {
+    @include a {
+        margin-top: 10px;
+    }
+}
+
+.scrollTopp {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    right: 15px;
+    bottom: 15px;
+
+    i {
+        padding: 10px;
+        background: $brand;
+    }
+}
+
+.secRow {
+    img {
+        @include a {
+            width: 100%;
+        }
+    }
+}

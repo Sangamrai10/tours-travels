@@ -1,0 +1,25 @@
+@mixin a{
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+@mixin b{
+    @media (min-width: 481px) and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin c{
+    @media (min-width: 769px) and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin d{
+    @media (min-width: 1025px) and (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin e{
+    @media (min-width: 1200px){
+        @content;
+    }
+}
